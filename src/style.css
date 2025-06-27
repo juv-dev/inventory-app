@@ -1,0 +1,84 @@
+@import "tailwindcss";
+@theme {
+
+  --breakpoint-xs: 320px;
+  --breakpoint-xm: 375px;
+  --breakpoint-sm: 480px;
+  --breakpoint-sd: 650px;
+  --breakpoint-md: 768px;
+  --breakpoint-ml: 992px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1366px;
+  --breakpoint-3xl: 1440px;
+  --breakpoint-4xl: 1600px;
+}
+
+/* Custom styles for form elements */
+@layer components {
+  [type="text"],
+  [type="email"],
+  [type="url"],
+  [type="password"],
+  [type="number"],
+  [type="date"],
+  [type="datetime-local"],
+  [type="month"],
+  [type="search"],
+  [type="tel"],
+  [type="time"],
+  [type="week"],
+  [multiple],
+  textarea,
+  select {
+    @apply text-[#50535A] appearance-none placeholder:text-[#808080] block bg-white border border-[#d3d3d3] rounded-md py-2 px-3 outline-none focus:ring-[#019df4] focus:ring-0 text-sm;
+  }
+
+  [type="checkbox"],
+  [type="radio"] {
+    @apply appearance-none outline-none border border-[#d3d3d3] checked:border-current focus:ring-0 focus:ring-offset-0 text-[#d3d3d3] inline-block align-middle h-4 w-4 p-0;
+  }
+
+  [type="checkbox"] {
+    @apply rounded-sm;
+  }
+
+  [type="radio"] {
+    @apply rounded-full;
+  }
+
+  [type="checkbox"]:checked {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%230b2739' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+  }
+  [type="checkbox"].checked-white:checked {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23ffffff' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+  }
+
+  [type="radio"]:checked {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%230b2739' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
+  }
+  [type="checkbox"],
+  [type="checkbox"]:checked,
+  [type="checkbox"]:checked:hover,
+  [type="checkbox"]:checked:focus,
+  [type="checkbox"]:indeterminate:hover,
+  [type="radio"],
+  [type="radio"]:checked,
+  [type="radio"]:checked:hover,
+  [type="radio"]:checked:focus {
+    @apply border;
+  }
+  select {
+    background-repeat: no-repeat;
+    background-position: right 0.85rem center;
+    background-size: 0.85rem 0.85rem;
+    padding-right: 2rem;
+  }
+  body {
+    margin: 0;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    background-color: #f3f4f6;
+    color: #1e293b;
+    min-height: 100vh;
+  }
+}

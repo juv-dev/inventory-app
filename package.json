@@ -1,0 +1,37 @@
+{
+  "name": "crud-vue-tailwind",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --open",
+    "build": "vite build",
+    "preview": "vite build && vite preview --open",
+    "clean:dist": "npx rimraf dist/basedata",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --check \"**/*.{cjs,js,vue}\"",
+    "format:fix": "prettier --write \"**/*.{cjs,js,vue}\""
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.4",
+    "pinia": "^3.0.2",
+    "pristinejs": "^0.1.9",
+    "swiper": "^11.2.6",
+    "tailwind-merge": "^3.2.0",
+    "vue": "^3.5.13",
+    "vue-final-modal": "^4.5.5",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.3",
+    "eslint": "^9.25.1",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-plugin-prettier": "^5.2.6",
+    "eslint-plugin-vue": "^10.0.0",
+    "prettier": "^3.5.3",
+    "sass": "^1.87.0",
+    "tailwindcss": "^4.1.4",
+    "vite": "^6.3.2"
+  }
+}
